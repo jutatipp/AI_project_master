@@ -26,13 +26,13 @@ model.fit(X_train, y_train)
 # ประเมินผล
 y_pred = model.predict(X_test)
 print("✅ Accuracy:", accuracy_score(y_test, y_pred))
-print("\n📊 Classification Report:")
+print("\n Classification Report:")
 print(classification_report(y_test, y_pred))
 
 # บันทึกโมเดล
 joblib.dump(model, "earthquake_model.pkl")
-print("\n💾 บันทึกโมเดลเรียบร้อย: earthquake_model.pkl")
+print("\n บันทึกโมเดลเรียบร้อย: earthquake_model.pkl")
 
 # บันทึก encoder
 joblib.dump(le, "label_encoder.pkl")
-print("💾 บันทึกตัวแปลง LabelEncoder เรียบร้อย: label_encoder.pkl")
+print(" บันทึกตัวแปลง LabelEncoder เรียบร้อย: label_encoder.pkl")
